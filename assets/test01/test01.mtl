@@ -26,5 +26,5 @@ newmtl 02___Default
 	Kd 0.5882 0.5882 0.5882
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\github\assets\test01\Masonry.Unit Masonry.Brick.Modular.Running.Grey.bump.jpg
-	map_Kd D:\github\assets\test01\Masonry.Unit Masonry.Brick.Modular.Running.Grey.bump.jpg
+	map_Ka D:\github\assets\test01\Brick.Grey.bmp.jpg
+	map_Kd D:\github\assets\test01\Brick.Grey.bmp.jpg
