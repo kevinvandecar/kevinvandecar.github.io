@@ -12,8 +12,8 @@ newmtl 01___Default
 	Kd 0.5882 0.5882 0.5882
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\github\assets\test01\Kawasaki-ZRX1200R.jpg
-	map_Kd D:\github\assets\test01\Kawasaki-ZRX1200R.jpg
+	map_Ka Kawasaki-ZRX1200R.jpg
+	map_Kd Kawasaki-ZRX1200R.jpg
 
 newmtl 02___Default
 	Ns 10.0000
@@ -26,5 +26,5 @@ newmtl 02___Default
 	Kd 0.5882 0.5882 0.5882
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka D:\github\assets\test01\Brick.Grey.bmp.jpg
-	map_Kd D:\github\assets\test01\Brick.Grey.bmp.jpg
+	map_Ka Brick.Grey.bmp.jpg
+	map_Kd Brick.Grey.bmp.jpg
