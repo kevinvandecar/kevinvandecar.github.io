@@ -1,52 +1,45 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<!DOCTYPE html>
 <html>
 <head>
-	<title>fred</title>
-	<meta content="PageBreeze Free HTML Editor (http://www.pagebreeze.com)" name="GENERATOR" />
-	<meta content="text/html;charset=ISO-8859-1" http-equiv="Content-Type" />
+    <meta charset="utf-8">
+	<title>Happy Holidays!!</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/skeleton.css">
+
+    <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/style.min.css?v=v3.1.*" type="text/css">
+	<script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/three.min.js?v=v3.1.*"></script>
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/viewer3D.min.js?v=v3.1.*"></script>
 </head>
-<body bgcolor="#ffffff" pbzloc="16">
-<h1 align="center" pbzloc="14"><span pbzloc="41" style="font-family: arial,helvetica,sans-serif"><img border="0" height="198" src="devcon_header.png" width="1125" /></span></h1>
 
-<h1 align="center" pbzloc="49"><span style="font-family: arial,helvetica,sans-serif"><span pbzloc="47">Forge DevLab</span><br />
-<span style="font-size: 18px"><strong pbzloc="7">Galileo 1001-1002-1003</strong></span><br />
-<span style="font-size: 18px"><strong pbzloc="18">1:00-5.30 PM</strong></span></span></h1>
+<body>
+<div id="viewer" class="col-md-11" style="height:400px;"></div>
 
-<h2 align="left" pbzloc="41"><span style="font-family: arial,helvetica,sans-serif"><span style="font-size: 22px"><span pbzloc="50">Resources</span></span></span></h2>
+<script>
+var viewer;
 
-<ul>
-	<li pbzloc="27"><span style="font-size: 20px"><span pbzloc="45" style="font-family: arial,helvetica,sans-serif">Main Forge Tutorial</span><br />
-	<span pbzloc="33" style="font-family: arial,helvetica,sans-serif"><a href="https://github.com/Autodesk-Forge/viewer-nodejs-tutorial">https://github.com/Autodesk-Forge/viewer-nodejs-tutorial</a></span><br />
-	&nbsp;</span></li>
-	<li pbzloc="53"><span style="font-size: 20px"><span pbzloc="39" style="font-family: arial,helvetica,sans-serif">Forge Quick Starts (Language specific)<br />
-	<a href="https://developer.autodesk.com/en/docs/quickstarts/v1/overview/" pbzloc="40">https://developer.autodesk.com/en/docs/quickstarts/v1/overview/</a></span><br />
-	&nbsp;</span></li>
-	<li pbzloc="54"><span style="font-size: 20px"><span style="font-family: arial,helvetica,sans-serif">Y</span><span pbzloc="51" style="font-family: arial,helvetica,sans-serif">ouTube:<br />
-	Forge Learning Path Programming Start: <a href="https://youtu.be/k0AL60JfRas">https://youtu.be/k0AL60JfRas</a>&nbsp;&nbsp;<br />
-	<span pbzloc="82" style="font-family: arial,helvetica,sans-serif">What is Forge - Overview: <a href="https://youtu.be/5xVwvBzemkg" pbzloc="69">https://youtu.be/5xVwvBzemkg</a></span></span><br />
-	&nbsp;</span></li>
-	<li pbzloc="37"><span style="font-size: 20px"><span pbzloc="91" style="font-family: arial,helvetica,sans-serif">Nvidia: <a href="https://www.nvidia.com/en-us/deep-learning-ai/education/">https://www.nvidia.com/en-us/deep-learning-ai/education/</a><br />
-	<span pbzloc="90" style="font-family: arial,helvetica,sans-serif"><span pbzloc="100" style="font-family: arial,helvetica,sans-serif">See descriptions at website.</span></span></span><br />
-	&nbsp;</span></li>
-	<li pbzloc="40"><span style="font-size: 20px"><span pbzloc="28" style="font-family: arial,helvetica,sans-serif">Amazon:</span><br />
-	<span pbzloc="35" style="font-family: arial,helvetica,sans-serif"><a href="https://github.com/tmakota/autodesk-aws-examples">https://github.com/tmakota/autodesk-aws-examples</a>&nbsp;(JavaScript)</span><br />
-	<span style="font-family: arial,helvetica,sans-serif">In this lab, users will learn how to convert Autodesk DWG file into PDF using AWS Services and Forge API. AWS services used are<br />
-	&bull;&nbsp;Simple Storage Service (S3)<br />
-	&bull;&nbsp;Identity and Access Management (IAM)<br />
-	&bull;&nbsp;Simple Notification Service (SNS) and<br />
-	&bull;&nbsp;AWS Lambda (Serverless Functions)</span><br />
-	<br />
-	<span pbzloc="28" style="font-family: arial,helvetica,sans-serif"><span pbzloc="27" style="font-family: arial,helvetica,sans-serif"><a href="https://github.com/awslabs/aws-lambda-zombie-workshop" pbzloc="17">https://github.com/awslabs/aws-lambda-zombie-workshop</a>&nbsp; (JavaScript)<br />
-	<span pbzloc="107" style="font-family: arial,helvetica,sans-serif">The Zombie Microservices Workshop introduces the basics of building serverless applications using AWS Lambda, Amazon API Gateway, Amazon DynamoDB, Amazon Cognito, Amazon SNS, and other AWS services. In this workshop, as a new member of the AWS Lambda Signal Corps, you are tasked with completing the development of a serverless survivor communications system during the Zombie Apocalypse.&#39;<br />
-	<br />
-	<span pbzloc="109" style="font-family: arial,helvetica,sans-serif"><a href="https://github.com/awslabs/aws-lex-net-chatbot" pbzloc="106">https://github.com/awslabs/aws-lex-net-chatbot</a>&nbsp; (C#)<br />
-	<span pbzloc="115" style="font-family: arial,helvetica,sans-serif">The .NET Core ChatBot application code featured here allows you to order flowers using a ChatBot powered by the Amazon Lex, an AWS AI service. The application is an ASP.NET Core MVC web application using AWS .NET SDK and the AWS Toolkit for Visual Studio and deployed on Amazon EC2 with Amazon Code Services using AWS Continuous Integration and Continuous Delivery toolchains.<br />
-	<br />
-	<span pbzloc="117" style="font-family: arial,helvetica,sans-serif"><a href="https://github.com/awslabs/aws-serverless-workshops" pbzloc="114">https://github.com/awslabs/aws-serverless-workshops</a> (Javascript)<br />
-	<span pbzloc="120" style="font-family: arial,helvetica,sans-serif">Wild Rydes Serverless Workshops - This repository contains a collection of workshops and other hands on content that will guide you through building various serverless applications using AWS Lambda, Amazon API Gateway, Amazon DynamoDB, AWS Step Functions, Amazon Kinesis, and other services.<br />
-	<br />
-	<span pbzloc="122" style="font-family: arial,helvetica,sans-serif"><a href="https://github.com/awslabs/ecs-deep-learning-workshop" pbzloc="119">https://github.com/awslabs/ecs-deep-learning-workshop</a> (Python)<br />
-	<span pbzloc="150" style="font-family: arial,helvetica,sans-serif">Deep Learning (DL) is an implementation of Machine Learning (ML) that uses neural networks to solve difficult problems such as image recognition, sentiment analysis and recommendations.</span></span></span></span></span></span></span></span></span><span pbzloc="25" style="font-family: arial,helvetica,sans-serif">This workshop will walk you through the deployment of a deep learning library called MXNet on AWS using Docker containers. Containers provide isolation, portability and repeatability, so your developers can easily spin up an environment and start building without the heavy lifting.</span></span></li>
-</ul>
+function viewit(modelName, lightPreset) {
+    var config3d = {
+          extensions: ['Autodesk.Viewing.WebVR']
+      };
+    var options = {
+        'document' : modelName, 
+         'env':'Local', 
+        };
+    var viewerElement = document.getElementById('viewer');
+    viewer = new Autodesk.Viewing.Private.GuiViewer3D(viewerElement, {});
+
+    Autodesk.Viewing.Initializer(options,function() {
+        viewer.initialize();
+        viewer.load(options.document);
+        viewer.setLightPreset(lightPreset);
+       viewer.loadExtension('Autodesk.Viewing.WebVR', Autodesk.Viewing.createViewerConfig());
+    });
+} 
+
+<!-- viewit( "https://kevinvandecar.github.io/assets/x-wing_max/svf/xwing.SVF", 7);-->
+viewit( "https:://kevinvandecar.github.io/assets/xmas_castle/svf/santa.SVF", 7);
+
+</script>
 </body>
 </html>
