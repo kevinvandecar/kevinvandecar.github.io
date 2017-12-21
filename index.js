@@ -30,9 +30,8 @@ function orient_view () {
 		 viewer.fitToView (true) ;
 		 viewer.createViewCube();
 		 viewer.displayViewCube(true);
-
       } else{
-			console.log("crappy");
+			console.log("viewer is null");
 	  }
 }
 
