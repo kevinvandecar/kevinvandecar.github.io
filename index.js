@@ -5,6 +5,9 @@ var viewer;
 
 // setup a new model in the viewer
 function viewit(modelName, lightPreset) {
+	var config3d = {
+          extensions: ['Autodesk.Viewing.WebVR']
+      };
     var options = {
         'document' : modelName, 
          'env':'Local', 
@@ -30,6 +33,7 @@ function orient_view () {
 		 viewer.fitToView (true) ;
 		 viewer.createViewCube();
 		 viewer.displayViewCube(true);
+		 viewer.loadExtension('Autodesk.Viewing.WebVR', Autodesk.Viewing.createViewerConfig());
       } else{
 			console.log("viewer is null");
 	  }
