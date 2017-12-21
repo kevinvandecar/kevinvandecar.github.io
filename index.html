@@ -13,6 +13,12 @@
 <div id="viewer" class="col-md-11" style="height:400px;"></div>
 
 <script>
+function positionToVector3(position) {
+	var x = parseFloat(position[0] || position.x);
+	var y = parseFloat(position[1] || position.y);
+	var z = parseFloat(position[2] || position.z);
+    return new THREE.Vector3(x, y, z);
+}
 var viewer;
 
 function viewit(modelName, lightPreset) {
@@ -37,9 +43,6 @@ function viewit(modelName, lightPreset) {
 	var up = positionToVector3([0,0,1]);
 	nav.setCameraUpVector(up);
     });
-	
-	
-
 
 } 
 
