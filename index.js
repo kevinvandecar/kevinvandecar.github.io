@@ -36,6 +36,6 @@ function orient_view () {
 	  }
 }
 
-viewit( "https://kevinvandecar.github.io/assets/xmas/santamax2/santa_2.svf", 7);
+viewit( "https://kevinvandecar.github.io/assets/xmas/santamax2/santa_4.svf", 7);
 
 	
