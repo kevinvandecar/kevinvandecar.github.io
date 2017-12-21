@@ -25,11 +25,7 @@ function viewit(modelName, lightPreset) {
         };
     var viewerElement = document.getElementById('viewer');
     viewer = new Autodesk.Viewing.Private.GuiViewer3D(viewerElement, {});
-      var nav = viewer.navigation;
-	nav.toPerspective();
-	var up = positionToVector3([0,1,0]);
-	nav.setCameraUpVector(up);
-	
+     
     Autodesk.Viewing.Initializer(options,function() {
         viewer.initialize();
         viewer.load(options.document);
