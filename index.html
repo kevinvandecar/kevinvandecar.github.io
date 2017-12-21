@@ -3,52 +3,19 @@
 <head>
     <meta charset="utf-8">
 	<title>Happy Holidays!!</title>
-
-    <link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/style.min.css?v=v3.1.*" type="text/css">
-	<script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/three.min.js?v=v3.1.*"></script>
-    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/viewer3D.min.js?v=v3.1.*"></script>
+		
+	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">	
+	<link rel="stylesheet" href="https://developer.api.autodesk.com/modelderivative/v2/viewers/style.min.css?v=v3.3" type="text/css">
+	<script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/three.min.js?v=v3.3"></script>
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/viewer3D.min.js?v=v3.3"></script>
 </head>
 
 <body>
-<div id="viewer" class="col-md-11" style="height:400px;"></div>
 
-<script>
-function positionToVector3(position) {
-	var x = parseFloat(position[0] || position.x);
-	var y = parseFloat(position[1] || position.y);
-	var z = parseFloat(position[2] || position.z);
-    return new THREE.Vector3(x, y, z);
-}
-var viewer;
+<div id="viewer3D" class="viewer-box"></div>
+<!-- div id="viewer" class="col-md-11" style="height:800px;"></div> -->
 
-function viewit(modelName, lightPreset) {
-    var config3d = {
-          extensions: ['Autodesk.Viewing.WebVR']
-      };
-    var options = {
-        'document' : modelName, 
-         'env':'Local', 
-        };
-    var viewerElement = document.getElementById('viewer');
-    viewer = new Autodesk.Viewing.Private.GuiViewer3D(viewerElement, {});
-     
-    Autodesk.Viewing.Initializer(options,function() {
-        viewer.initialize();
-        viewer.load(options.document);
-        viewer.setLightPreset(lightPreset);
-        viewer.loadExtension('Autodesk.Viewing.WebVR', Autodesk.Viewing.createViewerConfig());
-	
-	var nav = viewer.navigation;
-	nav.toPerspective();
-	var up = positionToVector3([0,1,0]);
-	nav.setCameraUpVector(up);
-    });
-
-} 
-
-<!--viewit( "https://kevinvandecar.github.io/assets/x-wing_max/svf/xwing.SVF", 7);-->
-    viewit( "https://kevinvandecar.github.io/assets/xmas/santamax2/santa_2.svf", 7);
-
+<script src="index.js">
 </script>
 </body>
 </html>
