@@ -32,6 +32,10 @@ function viewit(modelName, lightPreset) {
         viewer.setLightPreset(lightPreset);
        <!--viewer.loadExtension('Autodesk.Viewing.WebVR', Autodesk.Viewing.createViewerConfig());-->
     });
+      var nav = viewer.navigation;
+	nav.toPerspective();
+	var up = positionToVector3([0,0,1]);
+	nav.setCameraUpVector(up);
 } 
 
 <!--viewit( "https://kevinvandecar.github.io/assets/x-wing_max/svf/xwing.SVF", 7);-->
