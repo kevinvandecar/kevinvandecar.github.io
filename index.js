@@ -14,9 +14,9 @@ function viewit(modelName, lightPreset) {
 
     Autodesk.Viewing.Initializer(options,function() {
         viewer.initialize();
-		viewer.addEventListener (Autodesk.Viewing.GEOMETRY_LOADED_EVENT, function (event) {
-                    setTimeout (function () { orient_view(); }, 100) ;
-                }) ;		
+		//viewer.addEventListener (Autodesk.Viewing.GEOMETRY_LOADED_EVENT, function (event) {
+        //            setTimeout (function () { orient_view(); }, 100) ;
+        //        }) ;		
         viewer.load(options.document);
         viewer.setLightPreset(lightPreset);
     });
@@ -35,6 +35,6 @@ function orient_view () {
 	  }
 }
 
-viewit( "https://kevinvandecar.github.io/assets/xmas/santamax/santa_4.svf", 7);
+viewit( "https://kevinvandecar.github.io/assets/forge_logo/forge.SVF", 7);
 
 	
