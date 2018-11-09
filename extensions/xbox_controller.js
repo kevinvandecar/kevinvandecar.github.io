@@ -50,7 +50,7 @@ function setup_gamepad() {
 }
 
 
-class TemplateExtension extends Autodesk.Viewing.Extension {
+class XboxControllerExtension extends Autodesk.Viewing.Extension {
     constructor(viewer, options) {
         super(viewer, options);
         this.viewer = viewer;
@@ -67,8 +67,8 @@ class TemplateExtension extends Autodesk.Viewing.Extension {
     }
 }
 
-Autodesk.Viewing.theExtensionManager.registerExtension('TemplateExtension',
-    TemplateExtension);
+Autodesk.Viewing.theExtensionManager.registerExtension('XboxControllerExtension',
+    XboxControllerExtension);
 
 
 
