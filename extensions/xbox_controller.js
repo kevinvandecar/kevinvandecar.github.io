@@ -1,7 +1,8 @@
 ///////////////////////////////////////////////////////////////////////////////
-// Template extension to be used as a reference for extension development
-// by Denis Grigor, July 2018
+// XboxControllerExtension extension for Forge Viewer
+// Adds simple button control for Explode condition.
 //
+// Uses the gamepad API discussed here: https://developer.mozilla.org/en-US/docs/Web/API/Gamepad_API/Using_the_Gamepad_API
 ///////////////////////////////////////////////////////////////////////////////
 var rAF = window.requestAnimationFrame;
 var exploded = false;
@@ -70,24 +71,3 @@ class XboxControllerExtension extends Autodesk.Viewing.Extension {
 Autodesk.Viewing.theExtensionManager.registerExtension('XboxControllerExtension',
     XboxControllerExtension);
 
-
-
-
-
-/* some simple illustrations*/
-// this.viewer.setEnvMapBackground(false);
-// this.viewer.setBackgroundColor(234, 136, 89, 240,235,223);
-
-// this.viewer.setLightPreset(13);
-// this.viewer.impl.setPostProcessParameter("style", "edging");
-// this.viewer.impl.setPostProcessParameter("depthEdges", false);
-
-/*
-
-viewer = viewerApp.getCurrentViewer();
-
-viewer.setTheme('light-theme');
-viewer.setEnvMapBackground(false);
-viewer.setBackgroundColor(255,255,255,255,255,255);
-
-*/
