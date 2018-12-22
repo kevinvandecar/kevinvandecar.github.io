@@ -1,25 +1,30 @@
 "use strict";
 
 // global viewer
-var viewer;
+
+let viewer = null;
 
 // setup a new model in the viewer
 function viewit(modelName, lightPreset) {
-    var options = {
+
+	
+     var options = {
         'document' : modelName, 
          'env':'Local', 
         };
     var viewerElement = document.getElementById('viewer3D');
-    viewer = new Autodesk.Viewing.Viewer3D(viewerElement, {});
+
+    viewer = new Autodesk.Viewing.Private.GuiViewer3D (viewerElement, {}); //Autodesk.Viewing.Viewer3D(viewerElement, {});
 
     Autodesk.Viewing.Initializer(options,function() {
         viewer.initialize();
-		//viewer.addEventListener (Autodesk.Viewing.GEOMETRY_LOADED_EVENT, function (event) {
-        //            setTimeout (function () { orient_view(); }, 100) ;
-        //        }) ;		
+		viewer.addEventListener (Autodesk.Viewing.GEOMETRY_LOADED_EVENT, function (event) {
+                    setTimeout (function () { orient_view(); }, 100) ;
+                }) ;		
         viewer.load(options.document);
         viewer.setLightPreset(lightPreset);
     });
+ 
 } 
 
 // tell the viewer to fit the geometry to the view extents.
@@ -37,4 +42,5 @@ function orient_view () {
 
 viewit( "https://kevinvandecar.github.io/assets/forge_logo/forge.SVF", 7);
 
-	
+
+
