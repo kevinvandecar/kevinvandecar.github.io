@@ -30,7 +30,7 @@ function viewit(modelName, lightPreset) {
 // tell the viewer to fit the geometry to the view extents.
 function orient_view () {
       if (viewer != null) {
-		 var front = new THREE.Vector3(0, -1, 0);
+		 var front = new THREE.Vector3(55, -75, 88);
 		 viewer.navigation.setPosition(front);
 		 viewer.fitToView (true) ;
 		 viewer.createViewCube();
