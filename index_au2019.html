@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<html>
+  <head>
+    <title>Forge Demos + Resources</title>
+    <meta content="text/html; charset=windows-1252"
+      http-equiv="Content-Type">
+    <link rel="stylesheet"
+href="https://developer.api.autodesk.com/modelderivative/v2/viewers/style.min.css?v=v6.2"
+      type="text/css">
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/three.min.js?v=v6.2"></script>
+    <script src="https://developer.api.autodesk.com/modelderivative/v2/viewers/viewer3D.min.js?v=v6.2"></script>
+  </head>
+  <body pbzloc="16" bgcolor="#ffffff">
+    <h1 pbzloc="14" align="center"><span pbzloc="41" style="font-family:
+        arial,helvetica,sans-serif"><img src="devcon_header.png"
+          height="120" border="0"></span></h1>
+    <h1 pbzloc="49" align="center"><span style="font-family:
+        arial,helvetica,sans-serif"><span pbzloc="47">Forge Demos</span><br>
+        <h2 pbzloc="41" align="left"><span style="font-family:
+            arial,helvetica,sans-serif"><span style="font-size: 22px"><span
+                pbzloc="50">Resources</span></span></span></h2>
+        <ul>
+          <li pbzloc="27"><span style="font-size: 20px"><span <li=""><span
+                  style="font-size: 20px;"><span style="font-family:
+                    arial,helvetica,sans-serif;">Demos</span></span>
+                <p>general:<br>
+                  Autodesk Viewer<br>
+                  <a href="https://viewer.autodesk.com/">https://viewer.autodesk.com/</a>&nbsp;<br>
+                  Free viewer site. You can give it a try with your
+                  favorite model.</p>
+                <p>Viewer Rocks<br>
+                  <a href="https://viewer-rocks.autodesk.io/">https://viewer-rocks.autodesk.io/</a>&nbsp;<br>
+                  Custom viewer site. headless viewer with custom UI and
+                  controls to drive the viewer. Gallery of pretranslated
+                  models.</p>
+                <p>Product Design/Asset Review/M&amp;E<br>
+                  <a href="http://giro-watch.tk/">http://giro-watch.tk/</a>&nbsp;<br>
+                  Using THREE js diectly able to provide transforms /
+                  specialized kinematics to test joints etc. Requires
+                  extra programming, but for a "family" of assets could
+                  be possible to setup previews. Clock was authored in
+                  Autodesk Fusion 360.</p>
+                <p><br>
+                  Digital Twin:<br>
+                  <a href="https://forge-digital-twin.autodesk.io/">https://forge-digital-twin.autodesk.io/</a>&nbsp;<br>
+                  Good viewing large model from Inventor. Jim suggested
+                  this one. Has a few extensions at bottom. Could be a
+                  general eye-catcher! Can show complex Model browser
+                  data and explain parts and assembly structure. Many
+                  parts and assemblies have properties from metadata.
+                  Explode looks great. Measure is also easy to demo
+                  here. There are three extensions (custom
+                  functionality, including UI elemeents on right): 1.
+                  Heat Map shows data on the parts. See popup panel that
+                  allows to select heatmap data and change inensity. 2.
+                  Issues / Markup. Allows to view issues. Looks like you
+                  can add new issues, but getting croud. You could show
+                  how issues are linked to parts though. Click
+                  Maintentance tab, then click Isues sub-tab. Then you
+                  can click on a part number in the issues list and
+                  viewer shows it to you. 3. Real time data Animation.
+                  This one need to explain that we are overriding
+                  default Viewer behavior with THREE.js library to
+                  provide the animation. </p>
+                <p><br>
+                  AR/VR:<br>
+                  Forge Viewer option:<br>
+                  <a href="https://vrok.it/v2">https://vrok.it/v2</a>&nbsp;<br>
+                  Uses older WebVR standard. Functionality provided as
+                  Viewer extension, so is able to be loaded and enabled
+                  at-will. <br>
+                  AR/VR toolkit option to Unity<br>
+                  <a href="http://forgetoolkit.com/#/">http://forgetoolkit.com/#/</a>&nbsp;<br>
+                  This is a tookit that post-processes the Forge Viewer
+                  format into data that can be pulled into Unity. Works
+                  in two parts... After using Model Derivative to
+                  translated design to Forge Viewer format (SVF), you
+                  can then send it to AR VR toolkit services to generate
+                  better suited model for Unity and AV VR applications
+                  (but not limited). Via a Unity plugin, you can then
+                  statically import the asset, or dynamically load it
+                  from the server at runtime. This gives advantage of
+                  always having latest model in the AR VR experience.
+                  Limitations are device based.</p>
+                <p><br>
+                  IoT:<br>
+                  <a
+href="https://forge-rcdb.autodesk.io/configurator?id=58adee163e6f342cf1e92dae">https://forge-rcdb.autodesk.io/configurator?id=58adee163e6f342cf1e92dae</a>&nbsp;<br>
+                  Click on a hotspot in the model to show 'streaming IoT
+                  data'. Or click on an item in the list on the right.
+                  The data is fake - its just a demo. There is a way to
+                  connect your laptop to a real sensor and stream the
+                  data live to the sample, creating a much more
+                  impressive user experience. You need a texas sensor
+                  tag and running that project locally, plus a bluetooth
+                  connection: https://github.com/leefsmp/sensor-broker</p>
+                <p><br>
+                  AEC:<br>
+                  <a
+href="https://forge-rcdb.autodesk.io/configurator?id=57f3739777c879f48ad54a44">https://forge-rcdb.autodesk.io/configurator?id=57f3739777c879f48ad54a44</a>&nbsp;<br>
+                  Visual Reports<br>
+                  Multiple Viewers on same page. 3D and 2D. Can change
+                  2D view. Linked geometry data between viewers. Meta
+                  data used to build reports using 3rd party JS graph
+                  library. Data linked back to geomtry (ie. select a
+                  graphing element and show how selection is made in
+                  viewer).</p>
+                <p><br>
+                  MFG:<br>
+                  <a
+href="https://forge-rcdb.autodesk.io/database?id=57efaead77c8eb0a560ef465">https://forge-rcdb.autodesk.io/database?id=57efaead77c8eb0a560ef465</a>&nbsp;<br>
+                  Database/Metadata<br>
+                  The material list on the top right is a display from
+                  an online database. Click a material to see every
+                  object made from that material. Open the Properties
+                  for an element in the model, scroll down to see the
+                  'Database' properties. These have been injected into
+                  the Properties window from the database. Edit the
+                  material price in the database and the price in the
+                  property window changes too. <br>
+                  Careful with extensions.... I had some trouble with
+                  them recently...</p>
+                Internal only:&nbsp;<a
+                  href="https://wiki.autodesk.com/display/DTAL/Forge+Demo+list">https://wiki.autodesk.com/display/DTAL/Forge+Demo+list</a>&nbsp;</span></span></li>
+        </ul>
+        pbzloc="45" style="font-family:
+        arial,helvetica,sans-serif"&gt;Autodesk Forge</span><br>
+      <span pbzloc="33" style="font-family: arial,helvetica,sans-serif"><a
+          href="https://forge.autodesk.com/">https://forge.autodesk.com/</a></span><br>
+      &nbsp;
+      <li pbzloc="27"><span style="font-size: 20px"><span pbzloc="45"
+            style="font-family: arial,helvetica,sans-serif">Forge
+            Learning Material</span><br>
+          <span pbzloc="33" style="font-family:
+            arial,helvetica,sans-serif"><a
+              href="https://forge.autodesk.com/developer/getting-started">https://forge.autodesk.com/developer/getting-started</a></span><br>
+          <span pbzloc="33" style="font-family:
+            arial,helvetica,sans-serif"><a
+              href="https://forge.autodesk.com/developer/documentation">https://forge.autodesk.com/developer/documentation</a></span><br>
+          <span pbzloc="33" style="font-family:
+            arial,helvetica,sans-serif"><a
+              href="https://forge.autodesk.com/code-samples">https://forge.autodesk.com/code-samples</a></span><br>
+          <span pbzloc="33" style="font-family:
+            arial,helvetica,sans-serif"><a
+              href="https://learnforge.autodesk.io/">https://learnforge.autodesk.io/</a></span><br>
+          &nbsp;</span></li>
+      <li pbzloc="54"><span style="font-size: 20px"><span
+            style="font-family: arial,helvetica,sans-serif"></span><span
+            pbzloc="51" style="font-family: arial,helvetica,sans-serif">YouTube:<br>
+            Forge Play List (includes learning path): <a
+href="https://www.youtube.com/playlist?list=PL_6ApchKwjN9CZCqUl4RZrsyDvnTV1Jgb">https://www.youtube.com/playlist?list=PL_6ApchKwjN9CZCqUl4RZrsyDvnTV1Jgb</a>&nbsp;&nbsp;<br>
+            &nbsp;</span></span></li>
+      <li pbzloc="37"><span style="font-size: 20px"><span pbzloc="91"
+            style="font-family: arial,helvetica,sans-serif">Amazon: <a
+href="https://aws.amazon.com/quickstart/architecture/autodesk-forge/">https://aws.amazon.com/quickstart/architecture/autodesk-forge/</a><br>
+          </span><br>
+          &nbsp;</span></li>
+      <script src="index.js">
+</script></h1>
+  </body>
+</html>
