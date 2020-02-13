@@ -40,7 +40,7 @@ function orient_view () {
 	  }
 }
 
-viewit( "https://kevinvandecar.github.io/assets/x-wing_max/svf/xwing.SVF", 7);
+viewit( "https://kevinvandecar.github.io/assets/x-wing_max/svf/xwing.SVF", 8);
 
 
 
