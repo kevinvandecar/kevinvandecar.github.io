@@ -39,7 +39,7 @@ function initializeViewer( pdf ) {
       viewer.start();
       if (!pdf) return;
       viewer.loadExtension('Autodesk.PDF').then( () => {
-            viewer.loadModel( pdf , viewer);
+            viewer.loadModel( pdf, {page:2});
       });
 	});
 };
@@ -57,7 +57,7 @@ function orient_view () {
 	  }
 }
 
-initializeViewer("test.pdf");
+initializeViewer("test2.pdf");
 
 
 
