@@ -4,6 +4,32 @@
 
 let viewer = null;
 
+function createViewer(modelName) {
+
+    var options = {
+        'document': modelName,
+        'env': 'Local',
+        'keepCurrentModels': 'false'
+    };
+    var viewerElement = document.getElementById('viewer3D');
+
+    //var viewer = new Autodesk.Viewing.GuiViewer3D(viewerElement, {}); 
+    var viewer = new Autodesk.Viewing.Viewer3D(viewerElement, {});
+
+    Autodesk.Viewing.Initializer(options, function () {
+        viewer.initialize();       
+        viewer.addEventListener(Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT, function (event) {
+            setTimeout(function () {
+                initViewerExtensions(viewer);
+                updateViewerWireframe(viewer);
+            }, 500);
+        });
+        viewer.loadModel(options.document);
+    });
+
+    return viewer;
+}
+
 // setup a new model in the viewer
 function viewit(modelName, lightPreset) {
 
@@ -40,7 +66,7 @@ function orient_view () {
 	  }
 }
 
-viewit( "https://kevinvandecar.github.io/assets/dwf_test/FrontLoader.dwfx", 8);
+createViewer( "https://kevinvandecar.github.io/assets/dwf_test/FrontLoader.dwfx", 8);
 
 
 
