@@ -4,7 +4,7 @@
 
 let viewer = null;
 
-function createViewer(modelName) {
+function createViewer(modelName, lightPreset) {
 
     var options = {
         'document': modelName,
@@ -25,6 +25,7 @@ function createViewer(modelName) {
             }, 500);
         });
         viewer.loadModel(options.document);
+		viewer.setLightPreset(lightPreset);
     });
 
     return viewer;
