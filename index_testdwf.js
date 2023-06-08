@@ -18,12 +18,7 @@ function createViewer(modelName, lightPreset) {
 
     Autodesk.Viewing.Initializer(options, function () {
         viewer.initialize();       
-        viewer.addEventListener(Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT, function (event) {
-            setTimeout(function () {
-                initViewerExtensions(viewer);
-                updateViewerWireframe(viewer);
-            }, 500);
-        });
+        viewer.addEventListener(Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT, function (event));
         viewer.loadModel(options.document);
 		viewer.setLightPreset(lightPreset);
     });
@@ -31,28 +26,7 @@ function createViewer(modelName, lightPreset) {
     return viewer;
 }
 
-// setup a new model in the viewer
-function viewit(modelName, lightPreset) {
 
-	
-     var options = {
-        'document' : modelName, 
-         'env':'Local', 
-        };
-    var viewerElement = document.getElementById('viewer3D');
-
-    viewer = new Autodesk.Viewing.Private.GuiViewer3D (viewerElement, {}); //Autodesk.Viewing.Viewer3D(viewerElement, {});
-
-    Autodesk.Viewing.Initializer(options,function() {
-        viewer.initialize();
-		viewer.addEventListener (Autodesk.Viewing.GEOMETRY_LOADED_EVENT, function (event) {
-                    setTimeout (function () { orient_view(); }, 100) ;
-                }) ;		
-        viewer.load(options.document);
-        viewer.setLightPreset(lightPreset);
-    });
- 
-} 
 
 // tell the viewer to fit the geometry to the view extents.
 function orient_view () {
