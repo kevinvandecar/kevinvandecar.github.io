@@ -17,8 +17,7 @@ function createViewer(modelName, lightPreset) {
     var viewer = new Autodesk.Viewing.Viewer3D(viewerElement, {});
 
     Autodesk.Viewing.Initializer(options, function () {
-        viewer.initialize();       
-        viewer.addEventListener(Autodesk.Viewing.OBJECT_TREE_CREATED_EVENT, function (event));
+        viewer.initialize();
         viewer.loadModel(options.document);
 		viewer.setLightPreset(lightPreset);
     });
