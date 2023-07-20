@@ -75,7 +75,7 @@ function onClick() {
 		filename = "https://kevinvandecar.github.io/assets/dwf_test/rac_basic_sample_project_OnlySheet(VaultToDWF).rvt.dwf";
 		break;
 	  default:
-		gcount = 0;
+		gcount = -1;
 	}
 	console.log(filename);
 	createViewer(filename,8);  
