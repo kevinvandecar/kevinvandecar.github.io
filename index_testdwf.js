@@ -20,7 +20,6 @@ function createViewer(modelName, lightPreset) {
         viewer.initialize();		
         viewer.loadModel(options.document);
 		viewer.setLightPreset(lightPreset); // Typically, you can set the light preset here. 
-		viewer.loadExtension('Autodesk.LayerManager');
     });
 	
 	
