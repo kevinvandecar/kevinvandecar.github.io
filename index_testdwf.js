@@ -21,8 +21,8 @@ function createViewer(modelName, lightPreset) {
         viewer.loadModel(options.document);
 		viewer.setLightPreset(lightPreset); // Typically, you can set the light preset here. 
     });
-	var ext = viewer.loadExtension('Autodesk.LayerManager');
-	ext.activate();
+	
+	viewer.loadExtension('Autodesk.LayerManager');
 	
     return viewer;
 }
@@ -78,7 +78,8 @@ function onClick() {
 		break;
 	  case 9:
 		filename = "https://kevinvandecar.github.io/assets/dwf_test/AssemblySample.dwfx";
-		break;	  default:
+		break;	  
+	  default:
 		gcount = -1;
 	}
 	console.log(filename);
