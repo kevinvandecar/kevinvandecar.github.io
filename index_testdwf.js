@@ -13,8 +13,8 @@ function createViewer(modelName, lightPreset) {
     };
     var viewerElement = document.getElementById('viewer3D');
 
-    var viewer = new Autodesk.Viewing.GuiViewer3D(viewerElement, {}); 
-    //var viewer = new Autodesk.Viewing.Viewer3D(viewerElement, {});
+    //var viewer = new Autodesk.Viewing.GuiViewer3D(viewerElement, {}); 
+    var viewer = new Autodesk.Viewing.Viewer3D(viewerElement, {});
 
     Autodesk.Viewing.Initializer(options, function () {
         viewer.initialize();
