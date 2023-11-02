@@ -17,10 +17,10 @@ function createViewer(modelName, lightPreset) {
     //var viewer = new Autodesk.Viewing.Viewer3D(viewerElement, {});
 
     Autodesk.Viewing.Initializer(options, function () {
-        viewer.initialize();
-		viewer.loadExtension('Autodesk.LayerManager');
+        viewer.initialize();		
         viewer.loadModel(options.document);
 		viewer.setLightPreset(lightPreset); // Typically, you can set the light preset here. 
+		viewer.loadExtension('Autodesk.LayerManager');
     });
 	
 	
