@@ -76,7 +76,9 @@ function onClick() {
 	  case 8:
 		filename = "https://kevinvandecar.github.io/assets/dwf_test/rac_basic_sample_project_OnlySheet(VaultToDWF).rvt.dwf";
 		break;
-	  default:
+	  case 9:
+		filename = "https://kevinvandecar.github.io/assets/dwf_test/AssemblySample.dwfx";
+		break;	  default:
 		gcount = -1;
 	}
 	console.log(filename);
