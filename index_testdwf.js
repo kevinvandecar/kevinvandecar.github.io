@@ -22,7 +22,7 @@ function createViewer(modelName, lightPreset) {
 		viewer.setLightPreset(lightPreset); // Typically, you can set the light preset here. 
     });
 	
-	viewer.loadExtension('Autodesk.LayerManager');
+	//viewer.loadExtension('Autodesk.LayerManager');
 	
     return viewer;
 }
@@ -42,7 +42,10 @@ function orient_view () {
 	  }
 }
 
-var gcount = -1;
+let filename = "https://kevinvandecar.github.io/assets/dwf_test/AssemblySample.dwfx";
+createViewer(filename,8);
+
+/*var gcount = -1;
 let filename ="";
 
 function onClick() {
@@ -84,7 +87,7 @@ function onClick() {
 	}
 	console.log(filename);
 	createViewer(filename,8);  
-};
+};*/
 
 
 
